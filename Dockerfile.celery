@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 RUN rm requirements.txt
 
-COPY ./auth_service /app
+COPY ./grammar /app
 
-CMD ["celery", "-A", "auth_service.celery", "worker", "--loglevel=info"]
+CMD ["celery", "-A", "grammar.celery", "worker", "--loglevel=info"]
